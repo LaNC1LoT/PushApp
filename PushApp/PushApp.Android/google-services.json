@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "79301922803",
+    "firebase_url": "https://pushapp-9a4bd.firebaseio.com",
+    "project_id": "pushapp-9a4bd",
+    "storage_bucket": "pushapp-9a4bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79301922803:android:689b69c8fc46201a384c86",
+        "android_client_info": {
+          "package_name": "com.xamarin.pushapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79301922803-a7frfug8hu0jsu1n3rsfms4h7pv48gln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAjjP03uS1alGZS91LgO-0W7x6ScuBDF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79301922803-a7frfug8hu0jsu1n3rsfms4h7pv48gln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
