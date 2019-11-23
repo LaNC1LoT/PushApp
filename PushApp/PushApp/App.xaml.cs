@@ -7,11 +7,18 @@ namespace PushApp
 {
     public partial class App : Application
     {
-        public App()
+        public App(bool shallNavigate)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            if (shallNavigate)
+            {
+                MainPage = new NavigationPage(new DashboardPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new MainPage());
+            }
         }
 
         protected override void OnStart()

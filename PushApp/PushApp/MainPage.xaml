@@ -4,11 +4,9 @@
              xmlns:local="clr-namespace:PushApp"
              x:Class="PushApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="10">
+        <Entry Placeholder="Message" x:Name="message" HorizontalOptions="FillAndExpand"/>
+        <Button Text="Send Notification" Clicked="SendNotification"/>
     </StackLayout>
 
 </ContentPage>

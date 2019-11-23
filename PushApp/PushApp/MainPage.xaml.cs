@@ -13,5 +13,10 @@ namespace PushApp
         {
             InitializeComponent();
         }
+
+        private void SendNotification(object sender, EventArgs e)
+        {
+            DependencyService.Get<INotification>().CreateNotification("SPTutorials", message.Text);
+        }
     }
 }

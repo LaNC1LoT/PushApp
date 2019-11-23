@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Gms.Common;
 
 namespace PushApp.Droid
 {
@@ -16,10 +17,43 @@ namespace PushApp.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            bool flag = false;
+            if (Intent.Extras != null)
+            {
+                flag = true;
+            }
+
+            LoadApplication(new App(flag));
+            IsPlayServicesAvailable();
         }
+
+        public bool IsPlayServicesAvailable()
+        {
+            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
+            if (resultCode != ConnectionResult.Success)
+            {
+
+                if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
+                {
+                    //msgText.Text = GoogleApiAvailability.Instance.GetErrorString(resultCode);
+                }
+
+                else
+                {
+                    // msgText.Text = "This device is not supported";
+                    Finish();
+                }
+                return false;
+            }
+            else
+            {
+                // do whatever if play service is not available
+                //msgText.Text = "Google Play Services is available.";
+                return true;
+            }
+        }
+
     }
 }
